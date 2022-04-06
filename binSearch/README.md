@@ -81,3 +81,6 @@ int solve(int *arr, int left, int right, int x) {
 }
 ```
 
+- 上述代码`int mid = (left + right) / 2 `中的 `left + right`有可能会导致`int`整型溢出，所以我们一般可以使用`int mid = left + (right - left) / 2`来避免溢出。
+- 另外，二分法可以使用递归实现，但是大部分程序设计中采用的都是非递归的方法。 
+- `right = n而不是n - 1`的原因是：考虑到欲查询元素有可能比序列中的所有元素都大，此时应当返回n（假设它存在应该在的位置），因此二分上届是n。
